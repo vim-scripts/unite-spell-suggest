@@ -4,7 +4,7 @@
 		VIM REFERENCE for the Unite plug-in
 
 
-Unite spelling suggestion source	*unite-spell-suggest*
+Unite spelling suggestion source	*unite-spell-suggest-source*
 
 For help on Unite and its usage, see |unite.txt|.
 
@@ -106,7 +106,7 @@ include a scenario that reproducibly leads to the issue using a minimal vimrc
 (50 lines or less).
 
 ==============================================================================
-Credits and License			*unite-spell-suggest-credits-license*
+4. Credits and License			*unite-spell-suggest-credits-license*
 
 unite-spell-suggest is maintained by Martin Kopischke
 
