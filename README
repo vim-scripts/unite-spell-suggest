@@ -4,4 +4,4 @@ A unite.vim (vimscript #3396) source that displays Vims spelling suggestions f
 
 If you have wished there was a slicker, less obtrusive interface than Vims modal full-screen one to spelling suggestions and corrections, unite-spell-suggest is for you.
 
-Forked from original work by by MURAOKA Yusuke and maintained by Martin Kopischke at https://github.com/kopischke/unite-spell-suggest.
+Forked from original work by MURAOKA Yusuke and maintained by Martin Kopischke at https://github.com/kopischke/unite-spell-suggest.
