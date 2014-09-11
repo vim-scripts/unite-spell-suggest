@@ -2,7 +2,7 @@
 " Maintainer: Martin Kopischke <http://martin.kopischke.net>
 "             based on work by MURAOKA Yusuke <yusuke@jbking.org>
 " License:    MIT (see LICENSE.md)
-" Version:    1.1.0
+" Version:    1.1.1
 if !has('spell') || &compatible
   finish
 endif
@@ -102,9 +102,10 @@ endfunction
 
 " Helper functions: {{{1
 " * get info about word under cursor
-function! s:cword_info()
+"   (making sure we are looking at the same word as `z=` along the way)
+function! s:cword_info() abort
   return {
-  \       'word': mklib#string#trim(expand('<cword>')),
+  \       'word': mklib#cursor#spellstatus()[0],
   \ 'modifiable': &modifiable
   \ }
 endfunction
