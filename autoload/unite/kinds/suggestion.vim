@@ -2,7 +2,7 @@
 " Maintainer: Martin Kopischke <http://martin.kopischke.net>
 "             based on work by MURAOKA Yusuke <yusuke@jbking.org>
 " License:    MIT (see LICENSE.md)
-" Version:    1.1.1
+" Version:    1.1.2
 if !has('spell') || &compatible
   finish
 endif
@@ -27,8 +27,8 @@ let s:unite_kind.action_table   = {
 " * 'replace' [occurrence of target under cursor] action
 function! s:unite_kind.action_table.replace.func(candidate) abort
   if !empty(a:candidate.source__target_word)
-\ && mklib#string#trim(expand('<cword>')) ==# a:candidate.source__target_word
-    execute 'normal' a:candidate.source__suggestion_index.'z='
+\ && mklib#cursor#spellstatus()[0] ==# a:candidate.source__target_word
+    execute 'normal!' a:candidate.source__suggestion_index.'z='
     return 1
   endif
   return 0
